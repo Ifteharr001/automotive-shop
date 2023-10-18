@@ -1,5 +1,5 @@
-import Banner from "../Banner/Banner";
-import { NavLink } from "react-router-dom";
+
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const navBar = (
     <>
@@ -44,14 +44,12 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navBar}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-[#ff4605] hover:bg-[#81391e] text-white font-bold border-none w-[100px]">
+          <Link to="/login" className="btn bg-[#ff4605] hover:bg-[#81391e] text-white font-bold border-none w-[100px]">
             Login
-          </a>
+          </Link>
         </div>
       </div>
-      <div className="relative">
-        <Banner></Banner>
-      </div>
+      
     </div>
   );
 };
