@@ -1,5 +1,34 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 const Login = () => {
+    const { signIn, googleProvider } = useContext(AuthContext);
+    const [show, setShow] = useState(false);
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        signIn(email, password)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
+    const handleGoogleLogin = () => {
+        googleProvider()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
     return (
       <div>
         <div className="hero min-h-screen bg-base-200">
@@ -8,7 +37,7 @@ const Login = () => {
               Login Account
             </h1>
             <div className="card flex-shrink-0 w-[400px] shadow-2xl bg-[#ff4605]">
-              <form className="card-body">
+              <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label ">
                     <span className="label-text text-white font-bold">
@@ -17,8 +46,9 @@ const Login = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="email"
-                    className="input input-bordered"
+                    className="input input-bordered  bg-transparent border-2 border-white rounded-[100px]"
                     required
                   />
                 </div>
@@ -28,16 +58,30 @@ const Login = () => {
                       Password
                     </span>
                   </label>
-                  <input
-                    type="password"
-                    placeholder="password"
-                    className="input input-bordered"
-                    required
-                  />
+                  <div className="relative">
+                    <input
+                      type={show ? "text" : "password"}
+                      name="password"
+                      placeholder="password"
+                      className="input input-bordered w-full bg-transparent border-2 border-white rounded-[100px]"
+                      required
+                    />
+                    <span
+                      onClick={() => setShow(!show)}
+                      className="absolute top-4 right-3"
+                    >
+                      {show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                    </span>
+                  </div>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn bg-[#000000] border-none text-white">
+                  <button className="btn rounded-[100px] bg-[#000000] border-none text-white">
                     Login
+                  </button>
+                </div>
+                <div className="form-control mt-3">
+                  <button onClick={handleGoogleLogin} className="btn rounded-[100px] bg-[#000000] border-none text-white">
+                    Login with google
                   </button>
                 </div>
                 <p className="text-white">
