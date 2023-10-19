@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
+import BrandCard from "../../Components/BrandCard/BrandCard";
 
 const Home = () => {
   return (
@@ -6,6 +7,7 @@ const Home = () => {
       <div className="relative">
         <Banner></Banner>
       </div>
+      <BrandCard></BrandCard>
     </div>
   );
 };
