@@ -1,8 +1,8 @@
-// eslint-disable-next-line react/prop-types
-const ToyotaCardes = ({ toyota }) => {
-  // eslint-disable-next-line react/prop-types
-  const { image, name, description, price, rating } = toyota;
 
+// eslint-disable-next-line react/prop-types
+const BmwCardes = ({bmw}) => {
+  // eslint-disable-next-line react/prop-types
+  const { image, name, description, price, rating } = bmw;
   return (
     <div className="pt-28 ">
       <div className="card  bg-base-100 shadow-xl h-[500px] rounded-none">
@@ -25,4 +25,4 @@ const ToyotaCardes = ({ toyota }) => {
   );
 };
 
-export default ToyotaCardes;
+export default BmwCardes;

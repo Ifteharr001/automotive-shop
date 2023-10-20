@@ -36,18 +36,22 @@ const Route = createBrowserRouter([
       {
         path: "/brand/BMW",
         element: <Bmw></Bmw>,
+        loader: () => fetch("http://localhost:5000/card"),
       },
       {
         path: "/brand/Honda",
         element: <Honda></Honda>,
+        loader: () => fetch("http://localhost:5000/card"),
       },
       {
         path: "/brand/Ford",
         element: <Ford></Ford>,
+        loader: () => fetch("http://localhost:5000/card"),
       },
       {
         path: "/brand/Tesla",
         element: <Tesla></Tesla>,
+        loader: () => fetch("http://localhost:5000/card"),
       },
       {
         path: "/brand/Mercedes-Benz",
