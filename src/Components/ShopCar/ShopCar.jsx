@@ -1,7 +1,7 @@
 import { FaTrophy, FaGem, FaPeopleGroup, FaCalculator } from "react-icons/fa6";
 const ShopCar = () => {
   return (
-    <div className="max-w-[1140px] mx-auto">
+    <div className="max-w-[1140px] mx-auto mb-20">
       <h2 className="text-center font-bold text-5xl mb-8 ">
         Shop, Finance and Buy Your Car
       </h2>
