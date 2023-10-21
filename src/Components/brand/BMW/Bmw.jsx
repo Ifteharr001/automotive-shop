@@ -1,17 +1,22 @@
 import { useLoaderData } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 import BmwCardes from "./BmwCardes";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
 const Bmw = () => {
   const bmwCard = useLoaderData();
   return (
     <>
       <div>
-        <Swiper modules={[Navigation]} spaceBetween={50} slidesPerView={1} navigation >
+        <Swiper
+          loop={true}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={true}
+        >
           <SwiperSlide>
             <div
               className="hero h-[90vh]"

@@ -38,7 +38,7 @@ const AddProduct = () => {
               title: "Success",
               text: "Product Added Successfully",
               icon: "success",
-              confirmButtonText: "Cool",
+              confirmButtonText: "Ok",
             });
         }
       });

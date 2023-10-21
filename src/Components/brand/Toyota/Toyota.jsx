@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import ToyotaCardes from "./ToyotaCardes";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 
@@ -13,7 +14,12 @@ const Toyota = () => {
   return (
     <>
       <div>
-        <Swiper spaceBetween={50} slidesPerView={1}>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={true}
+          loop={true}
+        >
           <SwiperSlide>
             <div
               className="hero h-[90vh]"

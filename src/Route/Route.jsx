@@ -11,6 +11,8 @@ import Honda from "../Components/brand/Honda/Honda";
 import Ford from "../Components/brand/Ford/Ford";
 import Tesla from "../Components/brand/Tesla/Tesla";
 import MercedesBenz from "../Components/brand/MercedesBenz/MercedesBenz";
+import ProductDetails from "../Components/ProductDetails/ProductDetails";
+import UpdateCard from "../Components/UpdateCard/UpdateCard";
 const Route = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +39,16 @@ const Route = createBrowserRouter([
         path: "/brand/BMW",
         element: <Bmw></Bmw>,
         loader: () => fetch("http://localhost:5000/card"),
+      },
+      {
+        path: "/details/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch("http://localhost:5000/card"),
+      },
+      {
+        path: "/updateCard/:id",
+        element: <UpdateCard></UpdateCard>,
+        loader: ({params}) => fetch(`http://localhost:5000/card/${params.id}`),
       },
       {
         path: "/brand/Honda",
