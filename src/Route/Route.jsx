@@ -13,10 +13,13 @@ import Tesla from "../Components/brand/Tesla/Tesla";
 import MercedesBenz from "../Components/brand/MercedesBenz/MercedesBenz";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import UpdateCard from "../Components/UpdateCard/UpdateCard";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 const Route = createBrowserRouter([
   {
     path: "/",
     element: <LayOut></LayOut>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -24,11 +27,19 @@ const Route = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myCard",
-        element: <MyCard></MyCard>,
+        element: (
+          <PrivateRoute>
+            <MyCard></MyCard>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/brand/Toyota",
@@ -42,13 +53,18 @@ const Route = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/card"),
       },
       {
         path: "/updateCard/:id",
         element: <UpdateCard></UpdateCard>,
-        loader: ({params}) => fetch(`http://localhost:5000/card/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/card/${params.id}`),
       },
       {
         path: "/brand/Honda",
