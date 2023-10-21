@@ -40,6 +40,7 @@ const Route = createBrowserRouter([
             <MyCard></MyCard>
           </PrivateRoute>
         ),
+        loader: () => fetch("http://localhost:5000/userCard"),
       },
       {
         path: "/brand/Toyota",
