@@ -40,17 +40,26 @@ const Route = createBrowserRouter([
             <MyCard></MyCard>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/userCard"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/userCard"
+          ),
       },
       {
         path: "/brand/Toyota",
         element: <Toyota></Toyota>,
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/brand/BMW",
         element: <Bmw></Bmw>,
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/details/:id",
@@ -59,32 +68,50 @@ const Route = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/updateCard/:id",
         element: <UpdateCard></UpdateCard>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/card/${params.id}`),
+          fetch(
+            ` https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card/${params.id}`
+          ),
       },
       {
         path: "/brand/Honda",
         element: <Honda></Honda>,
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/brand/Ford",
         element: <Ford></Ford>,
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/brand/Tesla",
         element: <Tesla></Tesla>,
-        loader: () => fetch("http://localhost:5000/card"),
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/brand/Mercedes-Benz",
         element: <MercedesBenz></MercedesBenz>,
+        loader: () =>
+          fetch(
+            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+          ),
       },
       {
         path: "/login",

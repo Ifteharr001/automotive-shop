@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useLoaderData } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
+import MercedesBenzCardes from "./MercedesBenzCardes";
 const MercedesBenz = () => {
+  const mbCardes = useLoaderData();
   return (
     <div>
       <div>
@@ -99,7 +101,13 @@ const MercedesBenz = () => {
           ...
         </Swiper>
       </div>
-      <h3>Mercedes-Benz</h3>
+      <div className="grid grid-cols-3 gap-6 w-[1140px] mx-auto">
+        {mbCardes
+          .filter((mb) => mb.carbrand === "mercedesbenz")
+          .map((mb) => (
+            <MercedesBenzCardes key={mb._id} mb={mb}></MercedesBenzCardes>
+          ))}
+      </div>
     </div>
   );
 };

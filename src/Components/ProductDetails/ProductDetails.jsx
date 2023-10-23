@@ -12,36 +12,34 @@ const ProductDetails = () => {
     const email = user.email;
     const detail = details.find((detail) => detail._id == id);
     const cardDetails = {
-      
       detail,
-      email   
-      
-    }
-    console.log(cardDetails)
+      email,
+    };
+    console.log(cardDetails);
 
-    fetch("http://localhost:5000/userCard", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(cardDetails),
-    })
+    fetch(
+      " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/userCard",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(cardDetails),
+      }
+    )
       .then((res) => res.json())
-      .then((data) =>{
+      .then((data) => {
         if (data.insertedId) {
-            Swal.fire({
-              title: "Success",
-              text: "Product Added Successfully",
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
+          Swal.fire({
+            title: "Success",
+            text: "Product Added Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
         }
       });
+  };
 
-
-  }
-
-  
   return (
     <div>
       <div className="pt-28 w-[1050px] mx-auto ">

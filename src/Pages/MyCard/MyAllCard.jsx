@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
@@ -17,9 +17,12 @@ const MyAllCard = ({ card, setDelet, cards }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/userCard/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          ` https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/userCard/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

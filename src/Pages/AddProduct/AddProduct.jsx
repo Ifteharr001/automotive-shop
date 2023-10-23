@@ -23,23 +23,26 @@ const AddProduct = () => {
     };
     console.log(newProduct);
 
-    fetch("http://localhost:5000/card", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-            Swal.fire({
-              title: "Success",
-              text: "Product Added Successfully",
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
+          Swal.fire({
+            title: "Success",
+            text: "Product Added Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
         }
       });
   };
@@ -114,7 +117,7 @@ const AddProduct = () => {
                     <option value="ford">Ford</option>
                     <option value="tesla">Tesla</option>
                     <option value="bmw">BMW</option>
-                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="mercedesbenz">Mercedes-Benz</option>
                   </select>
                 </div>
                 {/* form row / price and short description */}
