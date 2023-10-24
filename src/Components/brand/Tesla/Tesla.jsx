@@ -27,7 +27,7 @@ const Tesla = () => {
                 <div className="hero-overlay bg-opacity-60 "></div>
                 <div className="hero-content text-left text-neutral-content ">
                   <div className="max-w-xl ">
-                    <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                    <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                       Tesla Leading the Charge
                     </h1>
                     <p className="mb-5 text-white">
@@ -54,7 +54,7 @@ const Tesla = () => {
                 <div className="hero-overlay bg-opacity-60 "></div>
                 <div className="hero-content text-left text-neutral-content ">
                   <div className="max-w-xl ">
-                    <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                    <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                       Tesla Premium Electric Fleet
                     </h1>
                     <p className="mb-5 text-white">
@@ -81,7 +81,7 @@ const Tesla = () => {
                 <div className="hero-overlay bg-opacity-60 "></div>
                 <div className="hero-content text-left text-neutral-content ">
                   <div className="max-w-xl ">
-                    <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                    <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                       Innovate the Way You Drive with Tesla
                     </h1>
                     <p className="mb-5 text-white">
@@ -101,7 +101,7 @@ const Tesla = () => {
             ...
           </Swiper>
         </div>
-        <div className="grid grid-cols-3 gap-6 w-[1140px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-28 lg:grid-cols-3 gap-6 w-[1140px] mx-auto">
           {teslaCard
             .filter((tesla) => tesla.carbrand === "tesla")
             .map((tesla) => (

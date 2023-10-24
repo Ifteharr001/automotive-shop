@@ -42,7 +42,7 @@ const Route = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/userCard"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/userCard"
           ),
       },
       {
@@ -50,7 +50,7 @@ const Route = createBrowserRouter([
         element: <Toyota></Toyota>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -58,7 +58,7 @@ const Route = createBrowserRouter([
         element: <Bmw></Bmw>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -70,7 +70,7 @@ const Route = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -78,7 +78,7 @@ const Route = createBrowserRouter([
         element: <UpdateCard></UpdateCard>,
         loader: ({ params }) =>
           fetch(
-            ` https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card/${params.id}`
+            `https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card/${params.id}`
           ),
       },
       {
@@ -86,7 +86,7 @@ const Route = createBrowserRouter([
         element: <Honda></Honda>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -94,7 +94,7 @@ const Route = createBrowserRouter([
         element: <Ford></Ford>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -102,7 +102,7 @@ const Route = createBrowserRouter([
         element: <Tesla></Tesla>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {
@@ -110,7 +110,7 @@ const Route = createBrowserRouter([
         element: <MercedesBenz></MercedesBenz>,
         loader: () =>
           fetch(
-            " https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
+            "https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card"
           ),
       },
       {

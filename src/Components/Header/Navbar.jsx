@@ -70,11 +70,11 @@ const Navbar = () => {
             </ul>
           </div>
           <img
-            className="w-[60px]"
+            className="w-[40px]  md:w-[60px] lg:w-[60px]"
             src="https://i.ibb.co/bzHqRJy/car-logo.png"
             alt=""
           />
-          <h1 className="text-2xl font-bold text-[#ff4605] ml-5">
+          <h1 className="text-xl md:text-2xl lg:text-2xl font-bold text-[#ff4605] ml-5">
             GearGrove Autos
           </h1>
         </div>

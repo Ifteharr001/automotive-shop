@@ -5,7 +5,7 @@ const BmwCardes = ({bmw}) => {
   // eslint-disable-next-line react/prop-types
   const {_id, image, name, description, price, rating } = bmw;
   return (
-    <div className="pt-28 ">
+    <div className="">
       <div className="card  bg-base-100 shadow-xl h-[500px] rounded-none">
         <figure>
           <img className="rounded-lg " src={image} alt="image" />

@@ -54,9 +54,9 @@ const AddProduct = () => {
 
       <div className="hero">
         <div className="hero-content ">
-          <div className="card flex-shrink-0 w-[800px] shadow-2xl  bg-[#ff4605]">
+          <div className="card flex-shrink-0 lg:w-[800px] shadow-2xl  bg-[#ff4605]">
             <form onSubmit={handleAddProduct} className="card-body ">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* form row / name and brand name*/}
                 <div className="form-control">
                   <label className="label">

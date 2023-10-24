@@ -7,7 +7,7 @@ const ToyotaCardes = ({ toyota }) => {
   const {_id, image, name, description, price, rating } = toyota;
 
   return (
-    <div className="pt-28 ">
+    <div className="">
       <div className="card  bg-base-100 shadow-xl h-[500px] rounded-none">
         <figure>
           <img className="rounded-lg " src={image} alt="image" />

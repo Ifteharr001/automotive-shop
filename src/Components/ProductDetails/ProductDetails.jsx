@@ -42,8 +42,8 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="pt-28 w-[1050px] mx-auto ">
-        <div className="card  bg-base-100 shadow-xl h-[700px] rounded-none">
+      <div className="pt-28 lg:w-[1050px] lg:mx-auto ">
+        <div className="card  bg-base-100 shadow-xl lg:h-[700px] rounded-none">
           <figure>
             <img className="rounded-lg " src={detail.image} alt="image" />
           </figure>

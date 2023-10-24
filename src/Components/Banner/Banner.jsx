@@ -11,7 +11,7 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="text-left">
-              <h1 className="mb-5 leading-[80px] text-white text-6xl font-bold">
+              <h1 className="mb-5 lg:leading-[80px] text-white text-5xl lg:text-6xl font-bold">
                 Welcome to GearGrove Autos <br /> Car Dealer
               </h1>
 

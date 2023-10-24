@@ -8,12 +8,16 @@ const MyCard = () => {
       const { user } = useContext(AuthContext);
     return (
       <div>
-        <div className="grid grid-cols-3 gap-6 w-[1140px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:w-[1140px] lg:mx-auto">
           {cards
             .filter((card) => card?.email === user.email)
             .map((card) => (
-              <MyAllCard key={card?._id} card={card} cards={cards} setDelet={setDelet}></MyAllCard>
-              
+              <MyAllCard
+                key={card?._id}
+                card={card}
+                cards={cards}
+                setDelet={setDelet}
+              ></MyAllCard>
             ))}
         </div>
       </div>

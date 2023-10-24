@@ -2,8 +2,8 @@ import { FaTrophy, FaGem, FaPeopleGroup, FaCalculator } from "react-icons/fa6";
 const ShopCar = () => {
   return (
     <div className="max-w-[1140px] mx-auto mb-20">
-      <h2 className="text-center font-bold text-5xl mb-8 ">
-        Shop, Finance and Buy Your Car
+      <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-5xl mb-8 ">
+        Shop, Finance and <span className="text-[#ff4605]">Buy Your Car</span>
       </h2>
       <p className="text-center w-4/5 mx-auto mb-12">
         Shop, finance, and buy your next car at GearGrove Autos. Experience
@@ -11,7 +11,7 @@ const ShopCar = () => {
         expectations. Your journey to exceptional car ownership begins here.
       </p>
 
-      <div className="grid grid-cols-2 mt-10 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10 gap-8">
         {/* card 1 */}
         <div className="flex">
           <div className="text-4xl text-[#ff4605] mt-10 mr-4 ">

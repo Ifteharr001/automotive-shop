@@ -28,7 +28,7 @@ const Bmw = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl  font-bold text-[#ff4605]">
                     The Ultimate Driving Experience
                   </h1>
                   <p className="mb-5 text-white">
@@ -55,7 +55,7 @@ const Bmw = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl  font-bold text-[#ff4605]">
                     Innovate the Future with BMW
                   </h1>
                   <p className="mb-5 text-white">
@@ -84,7 +84,7 @@ const Bmw = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl  font-bold text-[#ff4605]">
                     Elegance Meets Performance
                   </h1>
                   <p className="mb-5 text-white">
@@ -104,7 +104,7 @@ const Bmw = () => {
           ...
         </Swiper>
       </div>
-      <div className="grid grid-cols-3 gap-6 w-[1140px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 pt-28 lg:grid-cols-3 gap-6 w-[1140px] mx-auto">
         {bmwCard
           .filter((bmw) => bmw.carbrand === "bmw")
           .map((bmw) => (

@@ -26,7 +26,7 @@ const MercedesBenz = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                     Mercedes-Benz is the brand
                   </h1>
                   <p className="mb-5 text-white">
@@ -54,7 +54,7 @@ const MercedesBenz = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                     Mercedes-Benz is synonymous
                   </h1>
                   <p className="mb-5 text-white">
@@ -82,7 +82,7 @@ const MercedesBenz = () => {
               <div className="hero-overlay bg-opacity-60 "></div>
               <div className="hero-content text-left text-neutral-content ">
                 <div className="max-w-xl ">
-                  <h1 className="mb-5 text-5xl font-bold text-[#ff4605]">
+                  <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff4605]">
                     Elegance in Motion
                   </h1>
                   <p className="mb-5 text-white">
@@ -101,9 +101,9 @@ const MercedesBenz = () => {
           ...
         </Swiper>
       </div>
-      <div className="grid grid-cols-3 gap-6 w-[1140px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 pt-28 lg:grid-cols-3 gap-6 lg:w-[1140px] mx-auto">
         {mbCardes
-          .filter((mb) => mb.carbrand === "mercedesbenz")
+          .filter((mb) => mb.carbrand == "mercedesbenz")
           .map((mb) => (
             <MercedesBenzCardes key={mb._id} mb={mb}></MercedesBenzCardes>
           ))}
