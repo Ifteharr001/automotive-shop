@@ -2,12 +2,12 @@ import { FaTrophy, FaGem, FaPeopleGroup, FaCalculator } from "react-icons/fa6";
 const ShopCar = () => {
   return (
     <div className="max-w-[1140px] mx-auto mb-20">
-      <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-5xl mb-8 ">
+      <h2 className="text-center font-bold dark:text-white text-black text-3xl md:text-4xl lg:text-5xl mb-8 ">
         Shop, Finance and <span className="text-[#ff4605]">Buy Your Car</span>
       </h2>
-      <p className="text-center w-4/5 mx-auto mb-12">
-        Shop, finance, and buy your next car at GearGrove Autos. Experience
-        the joy of driving a vehicle that not only meets but exceeds your
+      <p className="text-center dark:text-gray-300 w-4/5 mx-auto mb-12">
+        Shop, finance, and buy your next car at GearGrove Autos. Experience the
+        joy of driving a vehicle that not only meets but exceeds your
         expectations. Your journey to exceptional car ownership begins here.
       </p>
 
@@ -24,7 +24,7 @@ const ShopCar = () => {
               </h1>
             </div>
             <div>
-              <p>
+              <p className="dark:text-gray-300">
                 At EcoMotion Cars, we embrace a future where driving is not just
                 a passion but a sustainable lifestyle. Explore our collection of
                 eco-friendly and electric vehicles that redefine the concept of
@@ -46,7 +46,7 @@ const ShopCar = () => {
               </h1>
             </div>
             <div>
-              <p>
+              <p className="dark:text-gray-300">
                 Our carefully curated selection of pre-owned vehicles offers the
                 perfect blend of reliability and affordability. Each car in our
                 Used Specials lineup has undergone rigorous inspection,
@@ -67,7 +67,7 @@ const ShopCar = () => {
               </h1>
             </div>
             <div>
-              <p>
+              <p className="dark:text-gray-300">
                 At GearGrove Autos, we prioritize your satisfaction and the
                 longevity of your vehicle. Schedule your service appointment
                 today and experience the convenience of reliable.
@@ -88,7 +88,7 @@ const ShopCar = () => {
               </h1>
             </div>
             <div>
-              <p>
+              <p className="dark:text-gray-300">
                 Upgrade to your dream car seamlessly with GearGrove Autos Value
                 Trade program. We understand that your current vehicle has
                 value, and we are here to make the transition to a new ride
