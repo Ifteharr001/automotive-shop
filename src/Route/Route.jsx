@@ -15,6 +15,7 @@ import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import UpdateCard from "../Components/UpdateCard/UpdateCard";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import DetailBook from "../Components/"
 const Route = createBrowserRouter([
   {
     path: "/",
@@ -80,6 +81,10 @@ const Route = createBrowserRouter([
           fetch(
             `https://automotive-shop-server-lv7b0u6sx-ifteharr001.vercel.app/card/${params.id}`
           ),
+      },
+      {
+        path: "/details/:id",
+        element: <DetailBook></DetailBook>,
       },
       {
         path: "/brand/Honda",
